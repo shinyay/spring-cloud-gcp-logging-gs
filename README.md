@@ -3,6 +3,9 @@
 Cloud Logging is part of the Google Cloud's operations suite of products. It includes storage for logs, a user interface called the Logs Explorer, and an API to manage logs programmatically. Logging lets you read and write log entries, query your logs, and control how you route and use your logs.
 
 ## Description
+### Dependency
+- com.google.cloud
+  - `spring-cloud-gcp-starter-logging`
 
 ## Demo
 
