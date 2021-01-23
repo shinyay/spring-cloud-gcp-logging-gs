@@ -19,6 +19,25 @@ Logback is a replacement for its predecessor, Log4j.
 Logback offers a faster implementation than Log4j, provides more options for configuration, and more flexibility in archiving old log files.
 
 
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="com/google/cloud/spring/logging/logback-appender.xml" />
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%-15.15thread]) %highlight(%-5level) %yellow(%-40.40C{40}) - %msg%n%throwable
+            </pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="STACKDRIVER" />
+    </root>
+</configuration>
+```
 
 ## Demo
 
