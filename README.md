@@ -7,6 +7,12 @@ Cloud Logging is part of the Google Cloud's operations suite of products. It inc
 - com.google.cloud
   - `spring-cloud-gcp-starter-logging`
 
+### Set up for GCP project ID and Credentials 
+```shell script
+$ gcloud config set project [YOUR_PROJECT_ID]
+$ gcloud auth application-default login
+```
+
 ## Demo
 
 ## Features
