@@ -13,6 +13,13 @@ $ gcloud config set project [YOUR_PROJECT_ID]
 $ gcloud auth application-default login
 ```
 
+### Logback Configuration
+Logback is the most widely used logging frameworks.
+Logback is a replacement for its predecessor, Log4j.
+Logback offers a faster implementation than Log4j, provides more options for configuration, and more flexibility in archiving old log files.
+
+
+
 ## Demo
 
 ## Features
