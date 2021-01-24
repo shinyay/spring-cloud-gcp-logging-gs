@@ -9,31 +9,31 @@
             </pattern>
         </encoder>
     </appender>
-    <property name="projectId" value="${projectId:-${GOOGLE_CLOUD_PROJECT}}"/>
-    <appender name="CONSOLE_JSON" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
-            <layout class="com.google.cloud.spring.logging.StackdriverJsonLayout">
-                <projectId>${projectId}</projectId>
-
-                <!--<includeTraceId>true</includeTraceId>-->
-                <!--<includeSpanId>true</includeSpanId>-->
-                <!--<includeLevel>true</includeLevel>-->
-                <!--<includeThreadName>true</includeThreadName>-->
-                <!--<includeMDC>true</includeMDC>-->
-                <!--<includeLoggerName>true</includeLoggerName>-->
-                <!--<includeFormattedMessage>true</includeFormattedMessage>-->
-                <!--<includeExceptionInMessage>true</includeExceptionInMessage>-->
-                <!--<includeContextName>true</includeContextName>-->
-                <!--<includeMessage>false</includeMessage>-->
-                <!--<includeException>false</includeException>-->
-                <!--<serviceContext>
-                      <service>service-name</service>
-                      <version>service-version</version>
-                    </serviceContext>-->
-                <!--<customJson>{"custom-key": "custom-value"}</customJson>-->
-            </layout>
-        </encoder>
-    </appender>
+    <include resource="com/google/cloud/spring/logging/logback-json-appender.xml" />
+<!--    <property name="projectId" value="${projectId:-${GOOGLE_CLOUD_PROJECT}}"/>-->
+<!--    <appender name="CONSOLE_JSON" class="ch.qos.logback.core.ConsoleAppender">-->
+<!--        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">-->
+<!--            <layout class="com.google.cloud.spring.logging.StackdriverJsonLayout">-->
+<!--                <projectId>${projectId}</projectId>-->
+<!--                <includeTraceId>true</includeTraceId>-->
+<!--                <includeSpanId>true</includeSpanId>-->
+<!--                <includeLevel>true</includeLevel>-->
+<!--                <includeThreadName>true</includeThreadName>-->
+<!--                <includeMDC>true</includeMDC>-->
+<!--                <includeLoggerName>true</includeLoggerName>-->
+<!--                <includeFormattedMessage>true</includeFormattedMessage>-->
+<!--                <includeExceptionInMessage>true</includeExceptionInMessage>-->
+<!--                <includeContextName>true</includeContextName>-->
+<!--                <includeMessage>false</includeMessage>-->
+<!--                <includeException>false</includeException>-->
+<!--                <serviceContext>-->
+<!--                      <service>service-name</service>-->
+<!--                      <version>service-version</version>-->
+<!--                </serviceContext>-->
+<!--                <customJson>{"custom-key": "custom-value"}</customJson>-->
+<!--            </layout>-->
+<!--        </encoder>-->
+<!--    </appender>-->
     <root level="INFO">
         <appender-ref ref="STDOUT" />
         <appender-ref ref="STACKDRIVER" />
