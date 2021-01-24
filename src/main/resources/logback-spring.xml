@@ -35,8 +35,8 @@
 <!--        </encoder>-->
 <!--    </appender>-->
     <root level="INFO">
-<!--        <appender-ref ref="STDOUT" />-->
-<!--        <appender-ref ref="STACKDRIVER" />-->
-        <appender-ref ref="CONSOLE_JSON" />
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="STACKDRIVER" />
+<!--        <appender-ref ref="CONSOLE_JSON" />-->
     </root>
 </configuration>
